@@ -1,4 +1,4 @@
-<img src="[images/readme_icon.png](readme_image.svg)" width="500" style="display: block; margin: 0;" />
+<img src="images/readme_icon.png" width="500" style="display: block; margin: 0;" />
 
 # Exploring Airbnb Properties with Tableau
 
@@ -20,7 +20,7 @@ Core submitted files include:
     - preview data in Tableau, create basic visualizations to assess the quality of a dataset
     - pinpoint required changes, modify dataset either in Pandas or directly in Excel
       
-   :pushpin: **JUMP TO:** [data](https://github.com/ankamercier/)
+   :pushpin: **JUMP TO:** [data](https://github.com/ankamercier/Analyzing_Airbnb_In_Tableau/tree/main/data)
  
 - **Load data back to Tableau:**
     - Use "Data Source" option to change a source file
@@ -34,7 +34,7 @@ Core submitted files include:
     - include a brief explanation or key insights
 - **Connect dashboards to create a Story**
   
-  :pushpin: **JUMP TO:** [results](https://github.com/ankamercier/)
+  :pushpin: **JUMP TO:** [results](https://github.com/ankamercier/Analyzing_Airbnb_In_Tableau/tree/main/results)
 
 ## Results
 
@@ -43,45 +43,45 @@ I chose Option 2, selected dataset: Airbnb Listing in NYC.
 ### Created visualizations:
 
 **1. Interactive Map**
-**Choice justification**: map shows geographical distribution of listings based on zip code and neighbourhood (geo dimention) and average price (measure). It has two parameters: Room Type and Price Range. Tooltip allows to filter listings by neighbourhood and shows average price per night in given years (2008-2015).
+<br>**Choice justification**: map shows geographical distribution of listings based on zip code and neighbourhood (geo dimention) and average price (measure). It has two parameters: Room Type and Price Range. Tooltip allows to filter listings by neighbourhood and shows average price per night in given years (2008-2015).
 
 **2. Stacked Bar Chart**
-**Choice justification**: stacked bar chart shows room type distribution by neighbourhood. It allows to compare amount of listings in each neighbourhood, it's stacked by Room Type. 
+<br>**Choice justification**: stacked bar chart shows room type distribution by neighbourhood. It allows to compare amount of listings in each neighbourhood, it's stacked by Room Type. 
 
 **3. Line Chart**
-**Choice justification**: in case of line chart, I checked listing growth over time, with horizontal axis showing years, and vertical axis showing sum of listings. Additionally, we can see a forecast for each room type using this visualization.
+<br>**Choice justification**: in case of line chart, I checked listing growth over time, with horizontal axis showing years, and vertical axis showing sum of listings. Additionally, we can see a forecast for each room type using this visualization.
 
 **4. Table**
-**Choice justification**: I initially wanted to create custom icons that would be "filled" based on percentage of listings available in each property type (this is different from room type, please check data source for reference). Unfortunately, its not possible in Tableau - the tool recognizes the icon, but cannot modify it's contents, apart from color. Choice was made to approach it differently: I created custom icons for selected property types (6 out of 19), added a label that shows their amount, color-coded it by amount, and used is as interactive part of the dashboard. Chosen property types: Apartment, Boat, Castle, House, Lighthouse, and Treehouse.
+<br>**Choice justification**: I initially wanted to create custom icons that would be "filled" based on percentage of listings available in each property type (this is different from room type, please check data source for reference). Unfortunately, its not possible in Tableau - the tool recognizes the icon, but cannot modify it's contents, apart from color. Choice was made to approach it differently: I created custom icons for selected property types (6 out of 19), added a label that shows their amount, color-coded it by amount, and used is as interactive part of the dashboard. Chosen property types: Apartment, Boat, Castle, House, Lighthouse, and Treehouse.
 
 **5. Bar chart**
-**Choice justification**: from a business perspective (to show which neighbourhoods have higher prices), I created a simple bar chart that shows average prices across neighborhoods. Combined with popularity, this visualization can provide vital insights for new entrants on Airbnb market, and support a decision making process regarding the choice of neighbourhood and property type based on profitability and occupancy rate.
+<br>**Choice justification**: from a business perspective (to show which neighbourhoods have higher prices), I created a simple bar chart that shows average prices across neighborhoods. Combined with popularity, this visualization can provide vital insights for new entrants on Airbnb market, and support a decision making process regarding the choice of neighbourhood and property type based on profitability and occupancy rate.
 
 **6. Another line chart**
-**Choice justification**: this optional visualization shows an average price per amount of beds.
+<br>**Choice justification**: this optional visualization shows an average price per amount of beds.
 
 **7. Highlight table**
-**Choice justification**: this interesting table provides an overview of selected property types an their "popularity" (or "occupancy rate"). There is no data available on how many times a listing was actually booked, so number of reviews served as a reference here. In my understanding reviews are written by visitors that stayed in the property, so technically we can use it as a certain dimention of popularity.
+<br>**Choice justification**: this interesting table provides an overview of selected property types an their "popularity" (or "occupancy rate"). There is no data available on how many times a listing was actually booked, so number of reviews served as a reference here. In my understanding reviews are written by visitors that stayed in the property, so technically we can use it as a certain dimention of popularity.
 
 ### Based on above mentioned visualizations, I was able to answer following questions:
 
 **1. How does the average price of Airbnb listings vary across different neighborhoods in New York City?**
-<br>Answer: *interactive map shows a full variability in prices. Listings are in general more expensive in Manhattan, but i noted some outliers based on property type or room type.*
+<br>Answer: *interactive map shows a full variability in prices. Listings are in general more expensive in Manhattan, but I noted some outliers based on property type or room type.*
 
 > [!IMPORTANT]
 > The price of listings change as you move further from popular landmarks or city centers.
 
 **2. Is there a correlation between the number of beds and the price of listings?**
-<br>Answer: *to investigate this, we can analyze our bed/price chart. In general, price increases with amount of bes available. But there are some interesting points: the price rapidly increases for properties with 8 beds, and with 12 beds. This means that if an new entrant on the market plans to invest in a property, and he chooses among either 4-7 beds (not to mistake with bedrooms)or 8, it's better to go for 8 bds in NYC. This may also vary by property type (but this correlation wasn't explored).*
+<br>Answer: *to investigate this, we can analyze our bed/price chart. In general, price increases with amount of beds available. But there are some interesting points: the price rapidly increases for properties with 8 beds, and with 12 beds. This means that if an new entrant on the market plans to invest in a property, and he chooses among either 4-7 beds (not to mistake with bedrooms)or 8, it's better to go for 8 bds in NYC. This may also vary by property type (but this correlation wasn't explored).*
 
 **3. What is the distribution of room types (Entire home/apt, Private room, etc.) across different neighborhoods?**
 <br>Answer: *it's a no-brainer that majority of listings are located on Manhattan.  However, analysis shows that while "Entire homes/apts" and "Shared rooms" have indeed a majority of listings there [10,268 and 436, respectively], most of "Private rooms" are actually in Brooklyn [5,726 listings].*
 
 **4. How has the number of Airbnb listings grown over time, based on the "Host Since" dates?**
-<br>Answer: *While "Entire home/apt" and "Private room" were steadily growing over time, "Shared room" growth was almost unnoticable.*
+<br>Answer: *While "Entire home/apt" and "Private room" were steadily growing over time, "Shared room" growth was almost unnoticable. Forecast shows expected steady growth of “Private Room” type, and decline of “Entire room/apt” starting in 2014.*
 
 **5. Which property types command the highest average number of reviews?**
-<br>Answer: *Among chosen property types, most "popular" is (surprisingly) a boat (avg number of reviews: 18.25). Then comes House (14.91) and apartment (14.91), Fancy a boat?*
+<br>Answer: *Among chosen property types, most "popular" is (surprisingly) a boat (avg number of reviews: 18.25). Then comes House (14.91) and apartment (14.91). Fancy a boat?*
 
 **6. How many property types there are in each neighborhood?**
 <br>Answer: *interactive map in a dashboard allows to view which property types are listed there. For instance, Bronx has only houses and apartments, and Manhattan offers these + one castle, 2 boats, and 2 treehouses!*
@@ -179,4 +179,7 @@ Are there any seasonal trends in pricing across different neighborhoods?
 ## :rocket: Future Goals
 Build animations, more sophisticated navigation across the workbook, and use more recent data that would include bookings and dates!
 
-[^1]: Disclaimer: this assignment is part of a final Tableau project at Lighthouse Labs
+> [!NOTE]
+> Here's a link to [Tableau Public](https://public.tableau.com/views/airbnb_workbook/Story?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+
+[^1]: Disclaimer: this assignment is part of a final Tableau project at Lighthouse Labs 
